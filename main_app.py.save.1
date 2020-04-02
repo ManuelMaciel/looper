@@ -1,0 +1,11 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-1 -*-
+import sys, time
+import serial 
+arduino = serial.Serial('/dev/ttyUSB0', 9600)
+inicio =  arduino.readline()
+if (inicio == 'A'):
+    #arduino.write('Y')
+    while True:
+        temperatura = arduino.readline() 
+        print(temperatura)elif (inicio == 'Z')
